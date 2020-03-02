@@ -5,6 +5,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
     card: {
@@ -13,7 +14,8 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'column',
     },
     cardMedia: {
-        paddingTop: '56.25%', // 16:9
+        //paddingTop: '56.25%', // 16:9
+        paddingTop: '75%', // 16:9
     },
     cardContent: {
         flexGrow: 1,
@@ -22,25 +24,32 @@ const useStyles = makeStyles(theme => ({
 
 const House = (props) => {
     const classes = useStyles();
-
+    console.log(props.data)
     return (
+
         <Card className={classes.card}>
+
             <CardActionArea>
-                <CardMedia
-                    className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
-                />
-                <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {'Heading'}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        {'This is a media card. You can use this section to describe the content.'}
-                    </Typography>
-                </CardContent>
+                <NavLink to={props.data.path}>
+                    <CardMedia
+                        className={classes.cardMedia}
+                        image={process.env.PUBLIC_URL + props.data.images[0].smile}
+                        title="Image title"
+                    />
+                </NavLink>
             </CardActionArea>
-        </Card>
+
+            <CardContent className={classes.cardContent}>
+                <Typography gutterBottom variant="h5" component="h2">
+                    {props.data.name}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    {props.data.general.sTotal + ' м2'}
+                </Typography>
+            </CardContent>
+
+        </Card >
+
     )
 }
 

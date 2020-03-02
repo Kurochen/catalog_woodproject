@@ -1,7 +1,6 @@
 import React from 'react';
 //import logo from './logo.svg';
 //import './App.css';
-import Test from './Test';
 import Header from './header/Header';
 import Footer from "./footer/Footer";
 import { makeStyles } from '@material-ui/core/styles';
@@ -14,7 +13,9 @@ const useStyles = makeStyles(theme => ({
     minHeight: '100%'
   },
   main: {
-    flexGrow: 1
+    flexGrow: 1,
+    paddingTop: theme.spacing(7),
+    paddingBottom: theme.spacing(7),
   },
   footer: {
     //flex: '0 0 auto'
@@ -24,12 +25,10 @@ const useStyles = makeStyles(theme => ({
 
 function App() {
   const classes = useStyles();
-
   return (
     <div className={classes.app}>
       <Header />
       <main className={classes.main}>
-        <Test />
         <HouseList />
       </main>
       <footer className={classes.footer}>
