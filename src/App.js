@@ -5,6 +5,8 @@ import Header from './header/Header';
 import Footer from "./footer/Footer";
 import { makeStyles } from '@material-ui/core/styles';
 import HouseList from './catalog/HouseList';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import DomLayout from '../src/domLayout/DomLayout'
 
 const useStyles = makeStyles(theme => ({
   app: {
@@ -26,15 +28,23 @@ const useStyles = makeStyles(theme => ({
 function App() {
   const classes = useStyles();
   return (
-    <div className={classes.app}>
-      <Header />
-      <main className={classes.main}>
-        <HouseList />
-      </main>
-      <footer className={classes.footer}>
-        <Footer />
-      </footer>
-    </div>
+    <BrowserRouter>
+      <div className={classes.app}>
+        <Header />
+        <main className={classes.main}>
+          <Switch>
+            <Route exact path='/'>
+              <HouseList />
+            </Route>
+            <Route exact path='/:house' children={<DomLayout />}>
+            </Route>
+          </Switch>
+        </main>
+        <footer className={classes.footer}>
+          <Footer />
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 }
 

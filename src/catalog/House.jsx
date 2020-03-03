@@ -24,7 +24,6 @@ const useStyles = makeStyles(theme => ({
 
 const House = (props) => {
     const classes = useStyles();
-    console.log(props.data)
     return (
 
         <Card className={classes.card}>
