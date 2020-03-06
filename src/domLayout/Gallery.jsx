@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import FsLightbox from 'fslightbox-react'
 import { makeStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import CardMedia from '@material-ui/core/CardMedia'
-import Card from '@material-ui/core/Card';
+
 
 const useStyles = makeStyles({
     box: {
@@ -42,7 +41,7 @@ function Gallery(props) {
     for (let i = 0; i < props.data.length; i++) {
         arrayImg.push(props.data[i].big)
     };
-    //console.log(arrayImg)
+
     return (
 
         <Box className={classes.box}>
@@ -50,6 +49,7 @@ function Gallery(props) {
                 props.data.map((i, index) => (
 
                     <CardActionArea
+                        key={index}
                         onClick={() => openLightboxOnSlide(index + 1)}
                         className={classes.card}>
                         <CardMedia

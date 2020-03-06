@@ -1,26 +1,32 @@
 export const data = [{
     path: 'domBrus180',
-    name: "Дом из бруса 180х150(h)",
-    description: "Двухэтажный жилой дом с односкатной кровлей.",
-    general: {
-        type: "дом",
-        sTotal: 153,
-        numberOfStoreys: 2,
-    },
-    dimensions: {
-        width: 10,
-        height: 10,
-    },
-    links: {
-        webStorage: "https://yadi.sk/d/YRaoyD6qekdsP",
-        model: "http://a360.co/2id94QW",
-        video: "https://youtu.be/tn25YC4ZEqM",
-    },
-    timber: {
-        width: 180,
-        height: 150,
-        type: "Погонажный. Ест. влажности",
-    },
+    name: 'Дом из бруса 180х150(h)',
+    description: 'Двухэтажный жилой дом с односкатной кровлей.',
+    properties: [
+        [
+            ['Заголовок', 'Основные характеристики'],
+            ['Тип', 'Дом'],
+            ['Площадь общая', 153],
+            ['Число этажей', 2]
+        ],
+        [
+            ['Заголовок', 'Габариты'],
+            ['Ширина', 10],
+            ['Длина', 10]
+        ],
+        [
+            ['Заголовок', 'Ссылки'],
+            ['Веб диск', 'https://yadi.sk/d/YRaoyD6qekdsP'],
+            ['3D модель', 'https://a360.co/2id94QW'],
+            ['Видео', 'https://youtu.be/tn25YC4ZEqM'],
+        ],
+        [
+            ['Заголовок', 'Размеры бруса'],
+            ['Ширина', 180],
+            ['Высота', 150],
+            ['Тип', 'Погонажный. Ест. влажности']
+        ],
+    ],
     images: [
         {
             smile: '/images/domPlosk/smile/1.jpg',
@@ -43,27 +49,33 @@ export const data = [{
 },
 {
     path: 'kd58',
-    name: "Каркасный дом КД-58",
-    description: "Один из известных проектов от Karkas.info. Был полностью прочерчен в качестве учебного образца. Самый компактный и легкий домик для дачи.",
-    general: {
-        type: "дом",
-        sTotal: 58,
-        numberOfStoreys: 1.5,
-    },
-    dimensions: {
-        width: 6,
-        height: 6,
-    },
-    links: {
-        webStorage: "https://yadi.sk/d/NquauKZu3FXoWt",
-        model: "http://a360.co/2nq8Hnd",
-        original: "http://www.karkas.info/doma-s-mansardoj/178-proect-i-chertezhi-karkasnogo-doma-kd-58.html",
-    },
-    timber: {
-        width: 200,
-        height: 50,
-        type: "Погонажныйест. влажности",
-    },
+    name: 'Каркасный дом КД-58',
+    description: 'Один из известных проектов от Karkas.info. Был полностью прочерчен в качестве учебного образца. Самый компактный и легкий домик для дачи.',
+    properties: [
+        [
+            ['Заголовок', 'Основные характеристики'],
+            ['Тип', 'Дом'],
+            ['Площадь общая', 58],
+            ['Число этажей', 1.5]
+        ],
+        [
+            ['Заголовок', 'Габариты'],
+            ['Ширина', 6],
+            ['Длина', 6]
+        ],
+        [
+            ['Заголовок', 'Ссылки'],
+            ['Веб диск', 'https://yadi.sk/d/NquauKZu3FXoWt'],
+            ['3D модель', 'http://a360.co/2nq8Hnd'],
+            ['Оригинал', 'http://www.karkas.info/doma-s-mansardoj/178-proect-i-chertezhi-karkasnogo-doma-kd-58.html'],
+        ],
+        [
+            ['Заголовок', 'Размеры бруса'],
+            ['Ширина', 200],
+            ['Высота', 50],
+            ['Тип', 'Погонажный. Ест. влажности']
+        ],
+    ],
     images: [
         {
             smile: '/images/kd-58/smile/1.jpg',

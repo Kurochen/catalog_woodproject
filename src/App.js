@@ -12,11 +12,12 @@ const useStyles = makeStyles(theme => ({
   app: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100%'
+    minHeight: '100%',
+    backgroundColor: '#eaebeb'
   },
   main: {
     flexGrow: 1,
-    paddingTop: theme.spacing(7),
+    paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(7),
   },
   footer: {

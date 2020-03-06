@@ -43,7 +43,7 @@ const House = (props) => {
                     {props.data.name}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                    {props.data.general.sTotal + ' м2'}
+                    {props.data.properties[0][2][1] + ' м2'}
                 </Typography>
             </CardContent>
 
