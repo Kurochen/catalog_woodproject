@@ -37,7 +37,7 @@ function App() {
             <Route exact path='/'>
               <HouseList />
             </Route>
-            <Route exact path='/:house' children={<DomLayout />}>
+            <Route path='/:house' children={<DomLayout />}>
             </Route>
           </Switch>
         </main>
