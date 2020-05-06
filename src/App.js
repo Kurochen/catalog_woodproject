@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import HouseList from './catalog/HouseList';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import DomLayout from '../src/domLayout/DomLayout'
+import ReactGA from 'react-ga';
 
 const useStyles = makeStyles(theme => ({
   app: {
@@ -25,9 +26,16 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+ReactGA.initialize('UA-000000-01');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 
 function App() {
   const classes = useStyles();
+
+  ReactGA.initialize('UA-000000-01');
+  ReactGA.pageview(window.location.pathname + window.location.search);
+
   return (
     <BrowserRouter>
       <div className={classes.app}>
