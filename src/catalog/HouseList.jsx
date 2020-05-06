@@ -5,7 +5,7 @@ import House from './House';
 import { data } from "../redux/data"
 
 
-const HouseList = (props) => {
+const HouseList = () => {
     return (
         <Container maxWidth={false}>
             <Grid container spacing={4}>

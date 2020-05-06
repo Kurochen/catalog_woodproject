@@ -26,5 +26,3 @@ const DescriptionContainer = (props) => {
 }
 
 export default DescriptionContainer
-
-//component="h1" variant="h4" align="center" color="textPrimary" gutterBottom

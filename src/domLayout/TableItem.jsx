@@ -7,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles({
     table: {
@@ -34,7 +35,15 @@ const TableItem = (props) => {
                             row => (
                                 <TableRow key={row[0]}>
                                     <TableCell component="th" scope="row">{row[0]}</TableCell>
-                                    <TableCell align="right">{row[1]}</TableCell>
+                                    {
+                                        /http/i.test(row[1])  // check RegEx "http"
+                                            ? <TableCell align="right">
+                                                <Link href={row[1]} target="_blank">
+                                                    Ссылка
+                                                </Link>
+                                            </TableCell>
+                                            : <TableCell align="right">{row[1]}</TableCell>
+                                    }
                                 </TableRow>
                             )
                         )
