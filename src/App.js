@@ -33,6 +33,7 @@ function App() {
   ReactGA.initialize('UA-43151433-4');
   ReactGA.pageview(window.location.pathname + window.location.search);
 
+
   return (
     <BrowserRouter>
       <div className={classes.app}>
