@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "test-1eff3"
+  },
+  "targets": {
+    "test-1eff3": {
+      "hosting": {
+        "catalog-wood": [
+          "catalog-wood"
+        ]
+      }
+    }
+  }
+}
