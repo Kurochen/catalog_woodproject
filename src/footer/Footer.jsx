@@ -6,8 +6,9 @@ import Copyright from './Copyright';
 const Footer = () => {
     return (
         <>
+        <CatalogDomLink />
             <Copyright />
-            <CatalogDomLink />
+            
         </>
     )
 }
