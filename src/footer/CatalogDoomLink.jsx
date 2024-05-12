@@ -5,9 +5,9 @@ import Link from '@material-ui/core/Link'
 const CatalogDomLink = () => {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
-            <Link href="https://sehou.ru/" target="_blank" color="inherit">
+            <Link href="https://sehou.ru/catalog/" target="_blank" color="inherit">
                 <p>
-                    Новая версия сайта, где можно разместить платные и бесплатные проекты. 
+                    Новая, улучшенная версия сайта, <br/> где можно добавлять бесплатные и платные проекты. 
                 </p>
             </Link>
         </Typography>

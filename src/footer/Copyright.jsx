@@ -5,7 +5,7 @@ function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © Каталог проектов '}
-            {new Date().getFullYear()}
+            {`2017`}
             {'.'}
         </Typography>
     );
